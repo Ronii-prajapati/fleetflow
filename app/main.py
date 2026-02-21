@@ -1,5 +1,12 @@
 from fastapi import FastAPI
 from app.core.config import settings
+from fastapi import FastAPI
+from app.routes import auth_routes
+from app.core.database import Base,engine
+from fastapi import FastAPI
+from app.core.database import get_db
+
+
 app = FastAPI(title="FleetFlow API")
 @app.get("/")
 def root():
@@ -16,9 +23,6 @@ def config_test():
         "host": settings.DB_HOST
     }
 
-from fastapi import FastAPI
-from app.core.database import get_db
-
 app = FastAPI()
 
 @app.get("/db-test")
@@ -33,4 +37,10 @@ def test_db():
     except Exception as e:
         return {"error": str(e)}    
     
-    
+
+
+Base.metadata.create_all(bind=engine)
+
+app=FastAPI(title="FleetFlow API")
+
+app.include_router(auth_routes.router)
