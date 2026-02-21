@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+
+    <link rel="stylesheet" href="login_style.css"/>
+    <script src="login_js.js"></script>
+</head>
+<body>
+    <div class="bg-blob bg-blob-1"></div>
+<div class="bg-blob bg-blob-2"></div>
+<div class="bg-blob bg-blob-3"></div>
+
+<div class="card">
+  <div class="card-header">
+    <div class="logo">
+      <div class="logo-icon">
+        <svg width="22" height="22" fill="none" viewBox="0 0 24 24">
+          <path fill="#fff" d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5S5.17 15.5 6 15.5s1.5.67 1.5 1.5S6.83 18.5 6 18.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
+        </svg>
+      </div>
+      <span class="logo-text">FleetSync</span>
+    </div>
+  </div>
+
+  <div class="card-body">
+    <div class="form-side">
+      <div class="tabs">
+        <div class="tab active" data-tab="login" onclick="switchTab('login')">Login</div>
+        <div class="tab" data-tab="register" onclick="switchTab('register')">Register</div>
+        <div class="tab" data-tab="forgot" onclick="switchTab('forgot')">Forgot Password</div>
+      </div>
+
+      <!-- LOGIN -->
+      <div class="form-panel active" id="panel-login">
+        <div class="input-group">
+          <svg width="18" height="18" fill="none" viewBox="0 0 24 24"><path fill="currentColor" d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          <input type="email" placeholder="Email ID" />
+        </div>
+        <div class="input-group">
+          <svg width="18" height="18" fill="none" viewBox="0 0 24 24"><path fill="currentColor" d="M18 8h-1V6A5 5 0 007 6v2H6a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V10a2 2 0 00-2-2zm-6 9a2 2 0 110-4 2 2 0 010 4zm3.1-9H8.9V6a3.1 3.1 0 016.2 0v2z"/></svg>
+          <input type="password" placeholder="Password" />
+        </div>
+        <div class="input-group">
+          <svg width="18" height="18" fill="none" viewBox="0 0 24 24"><path fill="currentColor" d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
+          <select>
+            <option value="" disabled selected>Select Role</option>
+            <option>Admin</option>
+            <option>Fleet Manager</option>
+            <option>Dispatcher</option>
+            <option>Safety Officer</option>
+            <option>Financial Analyst</option>
+            <option>Driver</option>
+          </select>
+          <svg width="14" height="14" fill="none" viewBox="0 0 24 24"><path fill="currentColor" d="M7 10l5 5 5-5z"/></svg>
+        </div>
+        <div class="form-footer">
+          <a class="forgot" onclick="switchTab('forgot')">Forgot your password?</a>
+          <button class="btn-primary">Login</button>
+        </div>
+      </div>
+
+      <!-- REGISTER -->
+      <div class="form-panel" id="panel-register">
+        <div class="form-grid">
+          <div class="input-group">
+            <svg width="17" height="17" fill="none" viewBox="0 0 24 24"><path fill="currentColor" d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
+            <input type="text" placeholder="Username" />
+          </div>
+          <div class="input-group">
+            <svg width="17" height="17" fill="none" viewBox="0 0 24 24"><path fill="currentColor" d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.58a1 1 0 01-.25 1.01l-2.2 2.2z"/></svg>
+            <input type="tel" placeholder="Mobile No." />
+          </div>
+          <div class="input-group">
+            <svg width="17" height="17" fill="none" viewBox="0 0 24 24"><path fill="currentColor" d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            <input type="email" placeholder="Email ID" />
+          </div>
+          <div class="input-group">
+            <svg width="17" height="17" fill="none" viewBox="0 0 24 24"><path fill="currentColor" d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+            <select>
+              <option value="" disabled selected>Select Role</option>
+              <option>Admin</option>
+              <option>Fleet Manager</option>
+              <option>Dispatcher</option>
+              <option>Safety Officer</option>
+              <option>Financial Analyst</option>
+              <option>Driver</option>
+            </select>
+            <svg width="14" height="14" fill="none" viewBox="0 0 24 24"><path fill="currentColor" d="M7 10l5 5 5-5z"/></svg>
+          </div>
+          <div class="input-group">
+            <svg width="17" height="17" fill="none" viewBox="0 0 24 24"><path fill="currentColor" d="M19 3h-1V1h-2v2H8V1H6v2H5C3.89 3 3 3.9 3 5v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/></svg>
+            <input type="date" />
+          </div>
+          <div class="input-group">
+            <svg width="17" height="17" fill="none" viewBox="0 0 24 24"><path fill="currentColor" d="M18 8h-1V6A5 5 0 007 6v2H6a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V10a2 2 0 00-2-2zm-6 9a2 2 0 110-4 2 2 0 010 4zm3.1-9H8.9V6a3.1 3.1 0 016.2 0v2z"/></svg>
+            <input type="password" placeholder="Password" />
+          </div>
+          <div class="input-group span-2">
+            <svg width="17" height="17" fill="none" viewBox="0 0 24 24"><path fill="currentColor" d="M18 8h-1V6A5 5 0 007 6v2H6a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V10a2 2 0 00-2-2zm-6 9a2 2 0 110-4 2 2 0 010 4zm3.1-9H8.9V6a3.1 3.1 0 016.2 0v2z"/></svg>
+            <input type="password" placeholder="Confirm Password" />
+          </div>
+          <div class="otp-row span-2">
+            <svg width="17" height="17" fill="none" viewBox="0 0 24 24"><path fill="currentColor" d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-1 14l-3-3 1.41-1.41L11 12.17l4.59-4.58L17 9l-6 6z"/></svg>
+            <input type="text" placeholder="Enter OTP" maxlength="6" />
+            <button class="btn-otp">Send OTP</button>
+          </div>
+        </div>
+        <button class="btn-primary btn-full">Register</button>
+      </div>
+
+      <!-- FORGOT PASSWORD -->
+      <div class="form-panel" id="panel-forgot">
+        <div class="input-group">
+          <svg width="18" height="18" fill="none" viewBox="0 0 24 24"><path fill="currentColor" d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          <input type="email" placeholder="Email ID" />
+        </div>
+        <div class="otp-row">
+          <svg width="17" height="17" fill="none" viewBox="0 0 24 24"><path fill="currentColor" d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-1 14l-3-3 1.41-1.41L11 12.17l4.59-4.58L17 9l-6 6z"/></svg>
+          <input type="text" placeholder="Enter OTP" maxlength="6"/>
+          <button class="btn-otp">Send OTP</button>
+        </div>
+        <div class="input-group">
+          <svg width="18" height="18" fill="none" viewBox="0 0 24 24"><path fill="currentColor" d="M18 8h-1V6A5 5 0 007 6v2H6a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V10a2 2 0 00-2-2zm-6 9a2 2 0 110-4 2 2 0 010 4zm3.1-9H8.9V6a3.1 3.1 0 016.2 0v2z"/></svg>
+          <input type="password" placeholder="New Password" />
+        </div>
+        <div class="input-group">
+          <svg width="18" height="18" fill="none" viewBox="0 0 24 24"><path fill="currentColor" d="M18 8h-1V6A5 5 0 007 6v2H6a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V10a2 2 0 00-2-2zm-6 9a2 2 0 110-4 2 2 0 010 4zm3.1-9H8.9V6a3.1 3.1 0 016.2 0v2z"/></svg>
+          <input type="password" placeholder="Confirm New Password" />
+        </div>
+        <div class="form-footer">
+          <span class="back-link" onclick="switchTab('login')">← Back to Login</span>
+          <button class="btn-primary">Reset Password</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Illustration -->
+    <div class="illus-side">
+      <div class="illus-circle-1"></div>
+      <div class="illus-circle-2"></div>
+      <svg class="illus-svg" width="270" height="210" viewBox="0 0 280 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="150" cy="200" rx="85" ry="12" fill="rgba(0,0,0,0.15)"/>
+        <path d="M65 160 L150 200 L235 160 L235 135 L150 175 L65 135 Z" fill="#d0d6e8"/>
+        <path d="M65 135 L150 175 L235 135 L150 95 Z" fill="#e8ecf6"/>
+        <path d="M150 175 L235 135 L235 160 L150 200 Z" fill="#c4cad8"/>
+        <path d="M65 135 L150 95 L235 135 L150 140 Z" fill="#5a5f9e"/>
+        <path d="M65 90 L150 50 L235 90 L150 130 Z" fill="#4a4e8c"/>
+        <path d="M235 90 L150 130 L150 135 L235 95 Z" fill="#3a3e7c"/>
+        <path d="M65 90 L150 130 L150 135 L65 95 Z" fill="#3a3e7c"/>
+        <path d="M78 88 L150 53 L222 88 L150 123 Z" fill="#f0f4ff"/>
+        <path d="M100 70 L140 50 L160 68 L120 88 Z" fill="rgba(255,255,255,0.18)"/>
+        <g fill="#c4cad8">
+          <rect x="96" y="148" width="6" height="4" rx="1"/>
+          <rect x="106" y="148" width="6" height="4" rx="1"/>
+          <rect x="116" y="148" width="6" height="4" rx="1"/>
+          <rect x="126" y="148" width="6" height="4" rx="1"/>
+          <rect x="136" y="148" width="6" height="4" rx="1"/>
+          <rect x="146" y="148" width="6" height="4" rx="1"/>
+          <rect x="156" y="148" width="6" height="4" rx="1"/>
+          <rect x="166" y="148" width="6" height="4" rx="1"/>
+          <rect x="101" y="155" width="6" height="4" rx="1"/>
+          <rect x="111" y="155" width="6" height="4" rx="1"/>
+          <rect x="121" y="155" width="6" height="4" rx="1"/>
+          <rect x="131" y="155" width="6" height="4" rx="1"/>
+          <rect x="141" y="155" width="6" height="4" rx="1"/>
+          <rect x="151" y="155" width="6" height="4" rx="1"/>
+          <rect x="161" y="155" width="6" height="4" rx="1"/>
+        </g>
+        <rect x="130" y="165" width="28" height="18" rx="3" fill="#b8bdd0"/>
+        <rect x="220" y="160" width="20" height="24" rx="3" fill="#e8ece0"/>
+        <rect x="218" y="158" width="24" height="6" rx="2" fill="#d0d4c8"/>
+        <path d="M230 158 Q220 130 205 115 Q220 120 230 158" fill="#4a9e6e"/>
+        <path d="M230 158 Q245 128 255 112 Q242 125 230 158" fill="#5ab87e"/>
+        <path d="M230 158 Q215 140 210 128 Q222 138 230 158" fill="#3a8e5e"/>
+        <ellipse cx="195" cy="160" rx="14" ry="6" fill="#e8ece0"/>
+        <rect x="181" y="145" width="28" height="16" rx="3" fill="#f0f4f0"/>
+        <path d="M209 150 Q218 150 218 156 Q218 162 209 162" stroke="#e0e4dc" stroke-width="2" fill="none"/>
+        <ellipse cx="195" cy="145" rx="14" ry="5" fill="#e8ece0"/>
+        <ellipse cx="195" cy="145" rx="11" ry="4" fill="#d4735a"/>
+      </svg>
+      <div class="illus-text">
+        <h2>FleetFlow</h2>
+        <p>Manage your fleet operations seamlessly</p>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
